@@ -1,0 +1,44 @@
+* {margin: 0; padding: 0;}
+canvas {display: block;}
+ 
+
+.hacker-title {
+     text-align: center;
+     font-size: 2em;
+     margin-top: 50px;
+     color: #0f0;
+     margin-bottom: 20px;
+   }
+   
+   .hacker-input {
+     text-align: center;
+     margin-top: 20px;
+   }
+   
+   .hackinput,
+   button {
+     padding: 10px 20px;
+     margin: 5px;
+     border: 2px solid #0f0;
+     background-color: #000;
+     color: #0f0;
+     font-family: 'Courier New', monospace;
+     font-size: 16px;
+     cursor: pointer;
+   }
+   ::placeholder{
+     color: white;
+   }
+   
+  
+   
+   .hacker-locations {
+     margin-top: 30px;
+     text-align: center;
+   }
+   
+  
+   .code{
+     margin-top: -500px;
+     text-align: center;
+   }
