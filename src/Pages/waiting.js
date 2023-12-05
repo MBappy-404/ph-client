@@ -8,7 +8,7 @@ const waiting = () => {
                <img src="https://i.gifer.com/1LBN.gif" alt="" />
               
           </div>
-          <h5 style={{textAlign: 'center', marginTop: '50px'}}>Something went wrong - try letter! </h5>
+          <h5 style={{textAlign: 'center', marginTop: '50px'}}>Something went wrong - Try letter! </h5>
           </div>
      );
 };

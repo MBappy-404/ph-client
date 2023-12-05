@@ -1,17 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import './HackingLogin.css'
+import './UserLogin.css'
 import { useNavigate } from 'react-router-dom';
 
-const HackingLogin = () => {
+const UserLogin = () => {
      const canvasRef = useRef(null);
      const navigate = useNavigate();
 
-     if ("vibrate" in navigator) {
-          // Vibrate for 30 seconds (if supported, but duration may be limited)
-          navigator.vibrate(30000);
-        } else {
-          console.log("Vibration not supported on this device.");
-        }
+   
 
 
 
@@ -27,7 +22,7 @@ const HackingLogin = () => {
           }
 
           const token = '#bc#3#8b2_4a+#4aa_#7d_8#3#0#1#c+5#c_4#e#425#f0##ca';
-          {key === '#bc#3#8b2_4a+#4aa_#7d_8#3#0#1#c+5#c_4#e#425#f0##ca' && localStorage.setItem("PHIS-ADMIN-TOKEN",token)}
+          {key === '#bc#3#8b2_4a+#4aa_#7d_8#3#0#1#c+5#c_4#e#425#f0##ca' && localStorage.setItem("PH-ADMIN-TOKEN",token)}
 
      }
 
@@ -103,4 +98,4 @@ const HackingLogin = () => {
      </div>;
 };
 
-export default HackingLogin;
+export default UserLogin;

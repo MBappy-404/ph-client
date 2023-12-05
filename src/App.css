@@ -977,7 +977,7 @@ input[type="submit"] {
 /* Show when the viewport width is 500px or more */
 @media (min-width: 600px) {
 	.mobile {
-		display:  block;
+		display:  none;
 	}
 }
 
